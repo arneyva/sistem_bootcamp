@@ -1,0 +1,55 @@
+*,
+::before,
+::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.wrapper {
+    display: flex;
+}
+
+.left {
+    flex: 0 0 10%;
+    background-color: aqua;
+    height: 100vh;
+    text-align: center;
+}
+
+.right {
+    flex-grow: 1;
+    overflow: hidden;
+}
+
+.nav {
+    padding: 20px;
+    background-color: red;
+}
+
+.nav ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+}
+
+.nav ul li {
+    padding: 10px;
+    list-style: none
+}
+
+.nav ul li a {
+    text-decoration: none;
+}
+
+.main-text {
+    padding-block: 200px 0;
+
+    height: 1200px;
+    color: red;
+}
+
+.scrollable {
+    overflow: auto;
+    max-height: 92vh;
+}

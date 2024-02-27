@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="fullName"></div>
+    <input type="text" id="firstName" name="firstName">
+    <input type="text" id="lastName" name="lastName">
+    <button id="submit">Submit</button>
+    <script>
+        const a = 11
+        document.write(a % 2 === 0 ? 'genap' : 'ganjil') //tenary operator
+
+
+        let x = 10;
+        // x = x + 1;
+        // x++;
+        x = x + 10;
+        x+= 10;
+        console.log(x);
+
+        x = x - 10;
+        x-=10;
+
+
+        let firstName = "Wij";
+        let lastName= "Gaming";
+        const fullNameElement = document.getElementById('fullName');
+        const btn = document.getElementById('submit');
+        btn.addEventListener('click', function(){
+            firstName = document.getElementById('firstName').value;
+            lastName = document.getElementById('lastName').value;
+            document.getElementById('fullName').innerHTML = firstName + ' ' + lastName;
+        })
+    </script>
+</body>
+</html>
