@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Latihan-4 | Flex Layout</title>
+    <!-- css -->
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            display: flex;
+        }
+        body > div {
+            flex-grow: 1;
+        }
+        .sidebar {
+            background-color: aqua;
+            height: 100vh; /* height: 102vh; */
+            width: 10vh;
+            text-align: center;
+            align-items: center;
+        }
+        .navbar {
+            background-color: red;
+            width: 100%;
+            height: 50px;
+            display: flex;
+            justify-content:end; /* Mengatur konten di akhir secara horizontal */
+            align-items: center;
+        }
+        .navbar ul {
+            display: flex; /* Membuat navbar menjadi flex container arah horizontal */
+            list-style: none; /* Menghilangkan bullet point */
+        }
+        .navbar ul li {
+            margin-left: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- sidebar -->
+    <aside class="sidebar">
+         sidebar
+    </aside>
+    <div>
+        <!-- navbar -->
+        <nav class="navbar">
+            <ul>
+                <li>Home</li>
+                <li>Contact</li>
+            </ul>
+        </nav>
+        <!-- main -->
+        <main style="overflow: auto; height: calc(100vh - 60px);">
+            <section style="height: 100vh;">Content</section>
+            <section style="height: 100vh;">Content</section>
+            <section style="height: 100vh;">Content</section>
+        </main>
+    </div>
+
+</body>
+
+</html>
