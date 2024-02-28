@@ -7,19 +7,27 @@
 }
 
 .wrapper {
-    display: flex;
+    display: flex; 
 }
 
-.left {
+.sidebar {
+    display: flex; /* Membuat .sidebar menjadi flex container */
+    flex-direction: column; /* Mengatur arah konten menjadi vertikal */
+    justify-content: center; /* Mengatur konten di tengah secara vertikal */
+    align-items: center; /* Mengatur konten di tengah secara horizontal */
     flex: 0 0 10%;
     background-color: aqua;
-    height: 100vh;
-    text-align: center;
+    /* height: 102vh; */
+    text-align: center; /* Memposisikan teks di tengah secara horizontal */
+
+}
+.element{
+    font-size: large; 
 }
 
 .right {
     flex-grow: 1;
-    overflow: hidden;
+    
 }
 
 .nav {
