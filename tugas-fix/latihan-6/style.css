@@ -1,0 +1,408 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    text-align: center;
+    background-color: #edf1f3;
+    margin: 0;
+}
+
+header {
+    width: 100%;
+    color: black;
+    position: sticky;
+    background-color: #ffffff;
+    top: 0;
+    z-index: 1;
+    margin-bottom: 0;
+}
+
+.logo {
+    width: 30%;
+    float: left;
+    text-align: left;
+}
+
+.logo a {
+    text-decoration: none;
+    font-size: 40px;
+    font-weight: 400;
+    color: black;
+    letter-spacing: 5px;
+}
+
+nav {
+    display: flex;
+    float: right;
+}
+
+nav a {
+    padding: 25px 20px;
+    margin: 0 1px;
+    cursor: pointer;
+}
+
+.wrapper {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav a:hover {
+    background-color: #79e0d9;
+}
+
+section.banner-area {
+    background: url("assets/banner.svg") no-repeat center;
+    -webkit-background-size: cover;
+    background-size: cover;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    width: 100%;
+    height: 70vh;
+    position: relative;
+    opacity: 0.8;
+}
+
+.banner-area:after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(270deg, #55aea9 20.14%, #1b568c 74.21%);
+
+    top: 0;
+    left: 0;
+    opacity: 0.8;
+    z-index: -1;
+}
+
+.banner-area h1 {
+    font-size: 32px;
+    width: 100%;
+    color: white;
+}
+
+.banner-area p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 16px;
+    width: 20%;
+    color: white;
+}
+
+.button-area {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.button-area .button {
+    background-color: rgb(0, 183, 255);
+    border-radius: 8px;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.button-area .button:hover {
+    background-color: #1111113f;
+    border: 1px solid #0884f5;
+}
+
+section.content-area {
+    padding: 50px 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.games-section {
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.games-section>.game-headline {
+    font-size: 24px;
+    /* float: left; */
+}
+
+.games-section>.games-option select {
+    padding: 10px 25px;
+    font-size: 15px;
+    border-radius: 8px;
+    /* float: right; */
+    display: flex;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    text-transform: capitalize;
+}
+
+.games-list {
+    display: flex;
+    max-width: 95%;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    /* margin: 40px auto; */
+}
+
+/* Tambahkan efek bayangan pada kartu */
+.game-card {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    width: 350px;
+
+    margin: 40px;
+    display: flex;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* Tambahkan efek bayangan */
+    transition: box-shadow 0.3s ease;
+    /* Tambahkan transisi untuk efek bayangan */
+}
+
+/* Tambahkan efek bayangan ketika hover */
+.game-card:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Atur tata letak konten dalam kartu */
+.game-card-content {
+    text-align: center;
+}
+
+.game-card-image-container {
+    position: relative;
+}
+
+.overlay {
+    position: absolute;
+    bottom: 10px;
+    left: 15px;
+    background-color: #c1e1ff;
+    padding: 8px;
+    border-radius: 30px;
+}
+
+.genre {
+    margin: 0;
+    font-size: 14px;
+}
+
+.game-card-image {
+    margin-top: 10px;
+    width: 95%;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.game-card:hover {
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    background: linear-gradient(135deg, #4caf50, #2196f3);
+    color: #ffffff;
+    cursor: pointer;
+}
+
+.description {
+    padding: 10px;
+    text-align: left;
+    margin: 5px;
+    gap: 12px;
+    display: flex;
+    flex-direction: column;
+    color: #373b59;
+    max-width: fit-content;
+}
+
+.description>.game-title {
+    margin: 0;
+    font-size: 18px;
+}
+
+.description>.game-description {
+    margin: 0;
+    font-size: 14px;
+}
+
+.release {
+    border-top: 1px solid #ecf0f8;
+    padding: 10px;
+    margin: 5px;
+    text-align: left;
+    display: flex;
+    flex-direction: row;
+    color: #a0a7b9;
+    gap: 80px;
+}
+
+.release h4 {
+    margin-top: 5px;
+    color: #000;
+    font-weight: normal;
+}
+
+.game-card:hover .description .game-title,
+.game-card:hover .description .game-description,
+.game-card:hover .release {
+    color: white;
+    /* Mengubah warna teks menjadi putih saat hover */
+}
+
+.hamburger-icon {
+    display: none;
+}
+
+@media screen and (max-width: 600px) {
+    header {
+        width: 100%;
+        color: black;
+        position: sticky;
+        background-color: #ffffff;
+        top: 0;
+        z-index: 1;
+        margin-bottom: 0;
+    }
+
+    .logo {
+        width: 20%;
+        float: left;
+        text-align: left;
+    }
+
+    .logo a {
+        text-decoration: none;
+        font-size: 20px;
+        font-weight: 400;
+        color: black;
+        letter-spacing: 5px;
+    }
+
+    nav {
+        display: none;
+        /* Sembunyikan navigasi pada layar kecil */
+    }
+
+    .hamburger-icon {
+        display: block;
+        /* Tampilkan hamburger icon pada layar kecil */
+    }
+
+    nav.show {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 45px;
+        /* Atur posisi navigasi */
+        right: 0;
+        background-color: #ffffff;
+        /* Atur warna background */
+        width: 100%;
+        padding: 20px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        /* Tambahkan efek bayangan */
+        z-index: 999;
+        /* Atur z-index agar navigasi tampil di atas elemen lain */
+    }
+
+    nav.show a {
+        margin-bottom: 10px;
+        /* Atur jarak antara setiap item navigasi */
+    }
+
+    .wrapper {
+        width: 90%;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    section.banner-area {
+        height: 50vh;
+        /* Reduce height for smaller screens */
+    }
+
+    .banner-area h1 {
+        font-size: 20px;
+        margin-top: 30px;
+    }
+
+    .banner-area p {
+        font-size: 12px;
+        /* Adjust font size for smaller screens */
+        width: 90%;
+    }
+
+    .button-area {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 40%;
+    }
+
+    .button-area .button {
+        background-color: rgb(0, 183, 255);
+        border-radius: 8px;
+        border: none;
+        color: white;
+        padding: 20px 10px;
+        text-align: center;
+        font-size: 10px;
+        cursor: pointer;
+    }
+
+    .games-section {
+        gap: 100px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .games-section>.game-headline {
+        font-size: 15px;
+    }
+
+    .games-section>.games-option select {
+        padding: 10px 15px;
+        font-size: 12px;
+        border-radius: 8px;
+        /* float: right; */
+        display: flex;
+
+        cursor: pointer;
+        text-transform: capitalize;
+    }
+
+    .release {
+        font-size: small;
+        gap: 80px;
+    }
+}
